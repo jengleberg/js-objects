@@ -16,7 +16,8 @@
 *Before this lesson, students should already be able to:*
 
 - **Create** and **manipulate** variables with JavaScript
-- **Use** the chrome dev tools console
+
+<!--Note: we will go into chrome dev tools in more detail later today, but for now we just need to be able to open it.-->
 
 <!--11:30 10 minutes -->
 
@@ -55,15 +56,13 @@ There are 2 main ways to create an object in Javascript.
 
 This is also called an [object initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-This is equivalent to the syntax above, and is the one we use to create JSON objects.
-
 ```javascript
 var myObject = {};
 ```
 
 #### Constructor function
 
-It is also possible to use a `function` statement to create an object that serves as a "constructor function."
+It is also possible to use a `function` statement to create an object that serves as a "constructor".
 
 The first step is to write a function that will define the object. By convention, we start the name of a constructor function with a capital letter. Once the function is defined (in the current scope), you can create a new object by using the keyword `new`.
 
@@ -104,11 +103,11 @@ Person.name
 ```
 
 ### Excercise 
-Create an object called ``classroom`` with properties, name and campus. The name property should have value Code Walkers and the campus property should have value Denver
+Create an object called ``classroom`` with properties, name and campus. The name property should have value WDI and the campus property should have value Denver
 <details>
   ```javascript
   var classroom = {
-    name: "Code Walkers"
+    name: "WDI",
     campus: "Denver"
   }
   ```
@@ -119,7 +118,7 @@ Create an object called ``classroom`` with properties, name and campus. The name
 There is another way to set properties on a JavaScript object.
 
 ```javascript
-classroom["name"]   = "Code Walkers";
+classroom["name"]   = "WDI";
 classroom["campus"] = "Denver";
 ```
 
@@ -131,7 +130,7 @@ console.log(classroom["name"]);
 
 var property = "campus";
 
-console.log(classroom["property"]);
+console.log(classroom[property]);
 => "Denver";
 ```
 
@@ -145,10 +144,10 @@ If you want to delete a property of an object (and by extension, the value attac
 The following code shows how to remove a property:
 
 ```
-var classroom = {"name": "Code Walkers", "campus": "Denver", "start": "10/31/2016"};
+var classroom = {"name": "WDI", "campus": "Denver", "start": "10/31/2016"};
 delete classroom.start;
 classroom
-=> {name: "Code Walkers", campus: "Denver"}
+=> {name: "WDI", campus: "Denver"}
 ```
 
 <!--11:55 5 minutes -->
@@ -159,7 +158,7 @@ As we've said before, the value of a property can be anything in JavaScript, whi
 
 ```javascript
 var classroom = {
-  name: "WDI 2",
+  name: "WDI 3",
   campus: "Denver",
   start: "10/31/2016",
   sayHello: function() {
@@ -182,7 +181,7 @@ In JavaScript, `this` is a keyword that refers to the current object.
 
 ```
 var classroom = {
-  name: "WDI 2",
+  name: "WDI 3",
   campus: "Denver",
   start: "10/31/2016",
   classInfo: function(){
@@ -191,7 +190,7 @@ var classroom = {
 };
 
 classroom.classInfo()
-=> This is WDI 2 and it starts on 10/31/2016
+=> This is WDI 3 and it starts on 10/31/2016
 ```
 
 #### Assigning a previously-defined function
@@ -199,34 +198,33 @@ classroom.classInfo()
 We can attach regular functions to objects as methods, even after they are created.
 
 ```
-var sayHello = function() { console.log("Hello"); }
+var sayHello = function() { console.log("Hola"); }
 
 classroom.sayHello = sayHello;  
 
 classroom.sayHello()
-=> Hello
+=> Hola
 ```
+
 <!-- 12:00 5 minutes -->
 
 ## Enumerating properties of an object
 
-We can use ``Object.keys()`` function to get all of the keys of an object.
+We can use the ``Object.keys()`` function to get all of the keys of an object.
 
 Once we have an array of the keys we can loop over the keys to work with all of the properties of an object.
 
 ```javascript
 var myCar = {"make": "Ford", "model": "Mustang", "year": 1969};
 
-var keys = Object.keys(myCar)
+var keys = Object.keys(myCar);
 
 for(i=0; i < keys.length; i++){ 
-  console.log("Key " + i + " " + keys[i]) 
+  console.log("Key " + i + " " + keys[i]);
 }
 ```
 
 This section from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects#Objects_and_properties) has more details.
-
-[Comment]: # (There are some corner cases that apply to enumeration based on the fact that its an object but we'll get into those next week.)
 
 <!--12:05 5 minutes -->
 
@@ -273,7 +271,7 @@ student1 === student2
 
 [CFU]: # (Stop and jot on the solutions to student1.name and the equality)
 
-What? Why is that?  Well, even though we had two names we only had a single object. Both of these variables are pointing to the same thing.
+What? Why is that?  Well, even though we had two names we only had a single object. Both of these variables are pointing to the same thing.  More specifically, they are pointing to the *same place in memory*.
 
 <!--12:10 18 minutes -->
 
@@ -290,12 +288,11 @@ What? Why is that?  Well, even though we had two names we only had a single obje
   - `eatSomething(thing)`: tells the user that `name` ate `thing`
   - `introduce`: produces a string introducing the current monkey, including its name, species, and its favorite foods
 
-- Create 3 monkeys total. Make sure all 3 monkeys have all properties set. All monkeys should eat multiple foods.
+- Create 3 monkeys total. Make sure all 3 monkeys have all properties set.
 
-- Exercise your monkeys by retrieving their properties and using their methods. Practice using both syntaxes for 
-retrieving properties (dot notation and brackets).
+- Exercise your monkeys by retrieving their properties and using their methods in the Dev Tools console. Practice using both syntaxes for retrieving properties (dot notation and brackets).
 
-[CFU]: # (A new requirement has just come. We need to start keeping track of color. Add a color property to each monkey.)
+[If Time]: # (A new requirement has just come. We need to start keeping track of color. Add a color property to each monkey.)
 
 <!--12:28 2 minutes -->
 
