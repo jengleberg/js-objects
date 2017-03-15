@@ -75,6 +75,7 @@ function Classroom(name, numberOfStudents) {
 var wdi = new Classroom("WDI 2 Denver", 12);
 ```
 
+<!--Actually 11:38-->
 <!--11:45 10 minutes -->
 
 ## Object Properties
@@ -113,6 +114,8 @@ Create an object called ``classroom`` with properties, name and campus. The name
   ```
 </details>
 
+<!--Actually 11:44 -->
+
 #### Bracket notation
 
 There is another way to set properties on a JavaScript object.
@@ -150,6 +153,7 @@ classroom
 => {name: "WDI", campus: "Denver"}
 ```
 
+<!--Actually 11:51-->
 <!--11:55 5 minutes -->
 
 ## Object methods
@@ -206,6 +210,7 @@ classroom.sayHello()
 => Hola
 ```
 
+<!--11:58-->
 <!-- 12:00 5 minutes -->
 
 ## Enumerating properties of an object
@@ -226,6 +231,7 @@ for(i=0; i < keys.length; i++){
 
 This section from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects#Objects_and_properties) has more details.
 
+<!--12:01 -->
 <!--12:05 5 minutes -->
 
 ## Comparing Objects
@@ -272,7 +278,7 @@ student1 === student2
 [CFU]: # (Stop and jot on the solutions to student1.name and the equality)
 
 What? Why is that?  Well, even though we had two names we only had a single object. Both of these variables are pointing to the same thing.  More specifically, they are pointing to the *same place in memory*.
-
+<!--12:07-->
 <!--12:10 18 minutes -->
 
 ## Monkey Exercise
@@ -294,6 +300,7 @@ What? Why is that?  Well, even though we had two names we only had a single obje
 
 [If Time]: # (A new requirement has just come. We need to start keeping track of color. Add a color property to each monkey.)
 
+<!--Actually 12:27 to show my solution -->
 <!--12:28 2 minutes -->
 
 ## Conclusion
