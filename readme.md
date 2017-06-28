@@ -115,6 +115,7 @@ Create an object called ``classroom`` with properties, name and campus. The name
 </details>
 
 <!--Actually 11:44 -->
+<!--11:51 WDI4 -->
 
 #### Bracket notation
 
@@ -154,6 +155,7 @@ classroom
 ```
 
 <!--Actually 11:51-->
+<!--11:56 WDI4-->
 <!--11:55 5 minutes -->
 
 ## Object methods
@@ -211,6 +213,7 @@ classroom.sayHello()
 ```
 
 <!--11:58-->
+<!--12:05 -->
 <!-- 12:00 5 minutes -->
 
 ## Enumerating properties of an object
@@ -279,6 +282,7 @@ student1 === student2
 
 What? Why is that?  Well, even though we had two names we only had a single object. Both of these variables are pointing to the same thing.  More specifically, they are pointing to the *same place in memory*.
 <!--12:07-->
+<!--12:16 WDI4 -->
 <!--12:10 18 minutes -->
 
 ## Monkey Exercise
@@ -300,6 +304,7 @@ What? Why is that?  Well, even though we had two names we only had a single obje
 
 [If Time]: # (A new requirement has just come. We need to start keeping track of color. Add a color property to each monkey.)
 
+<!--WDI4 Showed Solution at 12:28 -->
 <!--Actually 12:27 to show my solution -->
 <!--12:28 2 minutes -->
 
